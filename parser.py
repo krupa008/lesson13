@@ -6,10 +6,11 @@ response = requests.get(url)
 soup = BeautifulSoup(response.text, 'lxml')
 items = soup.find_all('div', class_='catalog__displayedItem__actualPrice')
 
+parsed_data = []
 
-for n, i in enumerate(items, start=1):
-    itemName = i.find('h1', class_='productPage__card').text.strip()
-
-    itemPrice = i.find('h1', class_='productPage__card').text.strip()
+for item in items: 
     
-    print(f'{n}:  {itemPrice} за {itemName}')
+    item_name = item.find('h1', class_='productPage__card').text.strip()
+    
+    parsed_data.append(item_name: "item")
+print(parsed_data)
