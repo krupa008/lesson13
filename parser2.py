@@ -10,3 +10,5 @@ for n, i in enumerate(items, start=1):
     itemName = i.find('h4', class_='card-title').text.strip()
     itemPrice = i.find('h5').text
     print(f'{n}:  {itemPrice} за {itemName}')
+
+    hjhkjhjhj
